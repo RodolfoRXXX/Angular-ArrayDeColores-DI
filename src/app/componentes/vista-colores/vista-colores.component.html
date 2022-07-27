@@ -1,0 +1,12 @@
+<div class="bg-secondary bg-gradient bg-opacity-10 d-flex justify-content-start align-content-center p-4">
+    <div 
+        *ngFor="let color of colores" 
+        class="border me-2 rounded d-flex flex-column justify-content-center" 
+        style="height: 80px; width: 80px; cursor:pointer;" 
+        [style.backgroundColor]="color.hexColor"
+        (click)="eliminarColor( color.hexColor )"
+        title="{{color.hexColor}}"
+    >
+        <h6 class="text-center text-white">{{ color.hexColor }}</h6>
+    </div>
+</div>
